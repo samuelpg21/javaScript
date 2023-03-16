@@ -1,3 +1,3 @@
 # javaScript
 
-samuelpg21.github.io/javaScript/
+https://samuelpg21.github.io/javaScript/
