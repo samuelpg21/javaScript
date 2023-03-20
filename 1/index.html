@@ -1,42 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-
+    <title></title>
+    
+    <script src="javaScript.js"></script>
 
 </head>
-
 <body>
+    <h1>Introduccion a JS</h1>
+    
+    <button onclick="calculoCuadrado()">Calcular cuadrado</button>
+    <button onclick="areaRectangulo()">Calcular area rectangulo</button>
+    <button onclick="division()">Division</button>
+    <button onclick="login()">Iniciar sesion</button>
 
-    <button onclick="compruebaEdad()">Comprueba Edad</button>
-
-    <script>
-        function compruebaEdad() {
-            let edad = prompt("Dime tu edad");
-
-            if (edad < 18) {
-                alert("No puedes entrar en esta pagina");
-                // window.location = "https://www.google.com";
-            } else {
-                alert("Bienvenido")
-            }
-        }
-
-        function doble() {
-            let numero = prompt("Dime un numero")
-            let doble = numero * 2
-
-            alert("El doble de " + numero + " es " + doble)
-        }
-    </script>
-
-    <h1>Primera pagina con JS</h1>
-
-    <button onclick="doble()">Calcular doble</button>
 </body>
-
 </html>
