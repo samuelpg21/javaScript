@@ -11,9 +11,8 @@ function usuarioYContrasena(){
 }
 
 function cambioContra() {
-    let contrasena = prompt("Dime tu contraseña")
-    let confirmaContrasena = prompt("Confirma tu nueva contraseña");
     let nuevaContrasena = prompt("Dime tu nueva contraseña");
+    let confirmaContrasena = prompt("Confirma tu nueva contraseña");
 
     if (nuevaContrasena == confirmaContrasena) {
         alert("Contraseña cambiada");
