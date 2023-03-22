@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#body2{
+    background-color: black;
+}
+
+button{
+    background-color: white;
+    height: 50px;
+    border: 0;
+}

@@ -42,3 +42,24 @@ function login(){
         alert("No estas autorizado")
     }
 }
+
+
+
+
+function adivinaElNumero(){
+    let numsecret = 8;
+    let numero = prompt("Dime un numero del 1 al 10");
+
+    if (numero == numsecret) {
+        alert("Acertastes el numero secreto");
+    } if (numero > 10 || numero < 0) {
+        alert("No puede ser mayor que 10 ni menor que 0")
+        return;
+    } if (numero > numsecret) {
+        alert("Te pasaste bro mi pana");
+        return;
+    } if (numero < numsecret) {
+        alert("No llegas pringao");
+        return;
+    }
+}
