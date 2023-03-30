@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1></h1>
+
+    <button onclick="divideDosNumeros()">Division</button>
+    <button onclick="cambiaCapa()">Cambiar capa</button>
+
+    <div id="capa1">
+        texto inicial
+    </div>
+
+    <form action="procesa.php" onsubmit="validaFormulario()">
+        <label for="nomb">Nombre</label>
+        <input type="text" name="nombre" id="nomb">
+
+        <p>
+            <input type="checkbox" name="condiciones" id="condiciones">
+                He leido las condiciones de uso
+        </p>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        /**********************************************************************************
+         * 1- Programacion
+         *      variables, ifs, alert, prompt, opers de relacion, oper aritmetico y logicas
+         **********************************************************************************/
+
+        function divideDosNumeros() {
+            let dividendo = prompt("Dime un numero que lo divido");
+            let divisor = prompt("Dime el divisor");
+            let resultado = dividendo / divisor;
+
+            if (divisor == 0) {
+                alert("No se puede dividir entre 0");
+            } else {
+                alert("El resultado de la division entre los numeros " + dividendo + " y " + divisor + " es " + resultado);
+            }
+        }
+
+        function cambiaCapa() {
+            let miCapa = document.getElementById("capa1");
+            miCapa.innerHTML = "<h1>nuevo contenido</h1>";
+            miCapa.style.color = "red";
+            miCapa.style.backgroundColor = "LightBlue";
+            miCapa.style.textAlign = "center";
+            miCapa.style.fontFamily = "Arial";
+        }
+
+        function validaFormulario() {
+            let nombre = document.getElementById("nomb");  
+            let condLeido = document.getElementById("condiciones");
+
+            if (nombre.value.length < 5) {
+                alert("El nombre no puede quedar vacio");
+                nombre.focus();
+                return false;
+            }
+
+            if (condLeido.checked == false) {
+                alert("Debe leer las condiciones")
+                condLeido.focus();
+                return false;
+            }
+
+            alert("Datos correctos");
+            return true;
+        }
+        
+    </script>
+</body>
+</html>
