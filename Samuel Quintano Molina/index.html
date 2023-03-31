@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen JS</title>
+
+    <script src="java.js"></script>
+
+</head>
+<body>
+
+    <p><button onclick="calculaNota()">Calcular notas</button></p>
+    <p><button onclick="calcularProducto()">Calcular producto</button></p>
+    <hr>
+
+    <p id="palert">Nivel de alerta 0</p>
+    <button onclick="cambioAlerta()">Cambiar alerta</button>
+    <hr>
+
+    <div id="acces">Acceso autorizado</div>
+    <button onclick="concederAcceso()">Cambiar acceso</button>
+    <hr>
+
+    <form action="procesa.php" onsubmit="return validaFormulario()">
+
+        <label for="nomb">Nombre</label>
+        <input type="text" name="nombre" id="nomb">
+        
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" value="0">
+
+        <label for="sub">Soy subscriptor</label>
+        <input type="checkbox" name="subscriptor" id="sub">
+
+        <select name="comunidades" id="comunidades">
+            <option value="clm">Castilla-La Mancha</option>
+            <option value="ma">Madrid</option>
+        </select>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
